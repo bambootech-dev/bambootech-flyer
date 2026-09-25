@@ -154,8 +154,9 @@ footer a{font-weight:600}
   .nav .wrap{height:68px}
   .brand .bt{height:40px} .brand .bt img{height:26px}
   .brand .fl{width:76px;height:40px}
-  .menu .btn{min-height:44px;font-size:14px;padding:0 14px}
-  .menu .long{display:inline}
+  .nav .wrap{gap:12px}
+  .menu{gap:12px}
+  .menu .btn{display:none}
   .hero{padding:48px 0 64px}
   .hero p{font-size:18px}
   .btns .btn{width:100%}
@@ -174,6 +175,12 @@ footer a{font-weight:600}
   .cta{padding:40px 26px;border-radius:28px}
   .qr{align-self:center}
   footer .right{text-align:left}
+}
+@media (max-width:400px){
+  .wrap{padding:0 16px}
+  .brand{gap:8px}
+  .brand .x{display:none}
+  .lang-btn{padding:6px 10px}
 }
 </style>
 </head>
@@ -425,7 +432,9 @@ footer a{font-weight:600}
 
   document.addEventListener('DOMContentLoaded', function(){
     document.querySelectorAll('.lang-btn').forEach(function(btn){
-      btn.addEventListener('click', function(){ applyLang(btn.dataset.lang); });
+      btn.addEventListener('click', function(){
+        applyLang(document.documentElement.lang === 'en' ? 'vi' : 'en');
+      });
     });
 
     var saved = null;
