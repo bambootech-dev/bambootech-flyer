@@ -116,9 +116,13 @@ h1,h2,h3,p{margin:0}
 /* PRICE */
 .price{background:var(--deep);color:#fff;border-radius:32px;padding:44px;display:flex;flex-direction:column;gap:22px}
 .badge{align-self:flex-start;background:var(--yellow);color:var(--ink);font-size:14px;font-weight:800;letter-spacing:1.5px;padding:6px 14px;border-radius:999px}
-.amount{display:flex;align-items:baseline;gap:12px}
+.amount{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
 .amount b{font-family:var(--display);font-size:96px;font-weight:800;line-height:.9}
 .amount span{font-size:20px;color:var(--lav-text)}
+.amount s{font-family:var(--display);font-size:36px;font-weight:700;color:var(--lav-dim);text-decoration-thickness:3px}
+.promo{align-self:flex-start;display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:16px;font-weight:600;color:var(--lav-text)}
+.promo b{background:var(--green);color:#fff;font-size:15px;font-weight:800;padding:6px 12px;border-radius:999px}
+[hidden]{display:none!important}
 .list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:18px}
 .list li{display:flex;gap:12px;align-items:center}
 .why{background:#fff;border:1.5px solid var(--line);border-radius:32px;padding:44px;display:flex;flex-direction:column;gap:26px}
@@ -228,7 +232,8 @@ footer a{font-weight:600}
 <p data-en="FLYER is an AI-powered English learning platform for children, already used by many bilingual and international schools. BambooTech is the official agent in Finland, helping Finnish, international, and multilingual families get started, with support in English and Vietnamese.">FLYER là nền tảng học tiếng Anh bằng AI cho trẻ em, đang được nhiều trường song ngữ, quốc tế sử dụng. BambooTech là đại lý chính thức tại Phần Lan, đồng hành cùng các gia đình người Phần Lan, quốc tế và đa ngôn ngữ, hỗ trợ bằng tiếng Anh và tiếng Việt.</p>
 <div class="btns">
 <a class="btn btn-yellow" href="https://bambootech.flyer.us" target="_blank" rel="noopener" data-en="Take the free test for your child">Cho con làm bài kiểm tra miễn phí</a>
-<a class="btn btn-ghost" href="#gia" data-en="See pricing: €30/year">Xem giá: 30 €/năm</a>
+<a class="btn btn-ghost" href="#gia" data-promo data-en="See pricing: €35.10/year">Xem giá: 35,10 €/năm</a>
+<a class="btn btn-ghost" href="#gia" data-regular hidden data-en="See pricing: €39/year">Xem giá: 39 €/năm</a>
 </div>
 <div class="ticks">
 <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-en="Learn right at home">Làm ngay tại nhà</span></span>
@@ -328,8 +333,11 @@ footer a{font-weight:600}
 <div class="wrap grid2">
 <div class="price">
 <div class="badge" data-en="1 account · 1 year">1 tài khoản · 1 năm</div>
-<div class="amount"><b>30 €</b><span data-en="/ year">/ năm</span></div>
-<p style="font-size:17px;line-height:1.5;color:var(--lav-text)" data-en="Less than €3 a month for daily learning.">Chưa đến 3 € mỗi tháng cho con học mỗi ngày.</p>
+<div class="promo" data-promo><b>−10%</b><span data-en="Offer valid until 31.12.2026">Ưu đãi đến hết 31.12.2026</span></div>
+<div class="amount" data-promo><s aria-label="Giá gốc 39 €" data-en-aria="Original price €39" data-en="€39">39 €</s><b data-en="€35.10">35,10 €</b><span data-en="/ year">/ năm</span></div>
+<div class="amount" data-regular hidden><b data-en="€39">39 €</b><span data-en="/ year">/ năm</span></div>
+<p style="font-size:17px;line-height:1.5;color:var(--lav-text)" data-promo data-en="Less than €3 a month for daily learning.">Chưa đến 3 € mỗi tháng cho con học mỗi ngày.</p>
+<p style="font-size:17px;line-height:1.5;color:var(--lav-text)" data-regular hidden data-en="Around €3.25 a month for daily learning.">Khoảng 3,25 € mỗi tháng cho con học mỗi ngày.</p>
 <ul class="list">
 <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-en="Full library of practice tests">Toàn bộ thư viện bài luyện thi</span></li>
 <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-en="Speaking practice with Bingo AI">Luyện nói với Bingo AI</span></li>
@@ -345,7 +353,7 @@ footer a{font-weight:600}
 <div class="why-item"><div class="icon i-grn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><div><b data-en="Official FLYER agent in Finland">Đại lý chính thức của FLYER tại Phần Lan</b><p data-en="Genuine activation codes, purchased from a local company based in Helsinki.">Mã kích hoạt chính hãng, mua từ một công ty tại Helsinki.</p></div></div>
 <div class="why-item"><div class="icon i-lav"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></div><div><b data-en="Local support in English and Vietnamese">Hỗ trợ tại chỗ bằng tiếng Anh và tiếng Việt</b><p data-en="Our team in Finland helps parents install, activate, and choose the right learning path for their child.">Đội ngũ của chúng tôi tại Phần Lan giúp bố mẹ cài đặt, kích hoạt và chọn lộ trình phù hợp cho con.</p></div></div>
 <div class="why-item"><div class="icon i-yel"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 7a7 7 0 1 0 0 10M4 10h9M4 14h9"/></svg></div><div><b data-en="Pay in euros">Thanh toán bằng euro</b><p data-en="Pay locally, with no international transfers or currency exchange.">Thanh toán trong nước, không cần chuyển tiền quốc tế hay đổi ngoại tệ.</p></div></div>
-<div class="why-item"><div class="icon i-lav"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2 .7 3.5 3 3.5 6"/></svg></div><div><b data-en="For multiple children, families, or groups">Mua cho nhiều con, nhiều gia đình hoặc nhóm</b><p data-en="Contact us for pricing on multiple accounts: [GROUP DISCOUNT]">Liên hệ để hỏi giá khi mua nhiều tài khoản: [ƯU ĐÃI NHÓM]</p></div></div>
+<div class="why-item"><div class="icon i-lav"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2 .7 3.5 3 3.5 6"/></svg></div><div><b data-en="For multiple children, families, or groups">Mua cho nhiều con, nhiều gia đình hoặc nhóm</b><p data-en="Buying several accounts? Contact us for a quotation.">Mua nhiều tài khoản? Liên hệ để nhận báo giá.</p></div></div>
 </div>
 </div>
 </section>
@@ -446,6 +454,11 @@ footer a{font-weight:600}
   }
 
   document.addEventListener('DOMContentLoaded', function(){
+    // 10% offer runs until the end of 31.12.2026 (Helsinki time), then the regular price shows automatically
+    var promoActive = Date.now() < Date.parse('2027-01-01T00:00:00+02:00');
+    document.querySelectorAll('[data-promo]').forEach(function(el){ el.hidden = !promoActive; });
+    document.querySelectorAll('[data-regular]').forEach(function(el){ el.hidden = promoActive; });
+
     document.querySelectorAll('.lang-btn').forEach(function(btn){
       btn.addEventListener('click', function(){
         applyLang(document.documentElement.lang === 'en' ? 'vi' : 'en');
