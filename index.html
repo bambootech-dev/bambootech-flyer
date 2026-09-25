@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FLYER tại Phần Lan – Cho con học tiếng Anh chuẩn Cambridge | BambooTech</title>
-<meta name="description" content="FLYER – nền tảng học tiếng Anh bằng AI cho trẻ em. BambooTech là đại lý chính thức tại Phần Lan, hỗ trợ phụ huynh bằng tiếng Việt. Kiểm tra trình độ miễn phí.">
-<meta property="og:title" content="Cho con học tiếng Anh tại nhà, chuẩn Cambridge – FLYER tại Phần Lan">
-<meta property="og:description" content="Kiểm tra trình độ miễn phí. Mua mã kích hoạt qua BambooTech, hỗ trợ bằng tiếng Việt.">
+<title data-en="FLYER in Finland – Cambridge-Standard English for Kids | BambooTech">FLYER tại Phần Lan – Cho con học tiếng Anh chuẩn Cambridge | BambooTech</title>
+<meta name="description" data-en-content="FLYER is an AI-powered English learning platform for children. BambooTech is the official agent in Finland, supporting Vietnamese parents in their own language. Free level test." content="FLYER – nền tảng học tiếng Anh bằng AI cho trẻ em. BambooTech là đại lý chính thức tại Phần Lan, hỗ trợ phụ huynh bằng tiếng Việt. Kiểm tra trình độ miễn phí.">
+<meta property="og:title" data-en-content="Cambridge-standard English at home for your child – FLYER in Finland" content="Cho con học tiếng Anh tại nhà, chuẩn Cambridge – FLYER tại Phần Lan">
+<meta property="og:description" data-en-content="Free level test. Buy your activation code through BambooTech, with support in Vietnamese." content="Kiểm tra trình độ miễn phí. Mua mã kích hoạt qua BambooTech, hỗ trợ bằng tiếng Việt.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,6 +56,13 @@ h1,h2,h3,p{margin:0}
 .menu a{color:var(--lav-text);text-decoration:none} .menu a:hover{color:#fff}
 .menu .btn{min-height:46px;font-size:16px;padding:0 20px;color:var(--ink);white-space:nowrap}
 
+/* LANG SWITCH */
+.lang-switch{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.22);border-radius:999px;padding:3px}
+.lang-btn{appearance:none;border:0;background:transparent;color:var(--lav-dim);font-family:inherit;font-size:13px;font-weight:700;letter-spacing:.5px;padding:6px 12px;border-radius:999px;cursor:pointer;transition:background .15s ease,color .15s ease}
+.lang-btn:hover{color:#fff}
+.lang-btn.active{background:var(--yellow);color:var(--ink)}
+.lang-btn:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+
 /* HERO */
 .hero{position:relative;overflow:hidden;background:var(--deep);color:#fff;padding:72px 0 100px}
 .blob{position:absolute;border-radius:50%;pointer-events:none}
@@ -63,7 +70,7 @@ h1,h2,h3,p{margin:0}
 .hero-text{display:flex;flex-direction:column;gap:24px}
 .pill{align-self:flex-start;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.25);color:var(--lav-text);padding:8px 16px;border-radius:999px}
 .hero h1{font-family:var(--display);font-size:clamp(42px,5.6vw,68px);font-weight:800;line-height:1.02;letter-spacing:-.5px}
-.hero h1 span,.hl{color:var(--yellow)}
+.hl{color:var(--yellow)}
 .hero p{font-size:20px;line-height:1.55;color:var(--lav-text);max-width:560px}
 .btns{display:flex;flex-wrap:wrap;gap:14px}
 .ticks{display:flex;flex-wrap:wrap;gap:12px 26px;font-size:15px;color:var(--lav-dim)}
@@ -174,17 +181,21 @@ footer a{font-weight:600}
 
 <header class="nav">
 <div class="wrap">
-<a class="brand" href="#" aria-label="BambooTech × FLYER – về đầu trang">
+<a class="brand" href="#" aria-label="BambooTech × FLYER – về đầu trang" data-en-aria="BambooTech × FLYER – back to top">
 <span class="bt"><img src="images/bambootech-logo.png" alt="BambooTech"></span>
 <span class="x" aria-hidden="true">×</span>
 <span class="fl"><img src="images/flyer-logo.png" alt="FLYER"></span>
 </a>
-<nav class="menu" aria-label="Điều hướng chính">
-<a href="#tinh-nang">Tính năng</a>
-<a href="#cach-bat-dau">Cách bắt đầu</a>
-<a href="#gia">Giá</a>
-<a href="#hoi-dap">Hỏi đáp</a>
-<a class="btn btn-yellow" href="https://bambootech.flyer.us" target="_blank" rel="noopener">Kiểm tra <span class="long">&nbsp;trình độ&nbsp;</span> miễn phí</a>
+<nav class="menu" aria-label="Điều hướng chính" data-en-aria="Main navigation">
+<a href="#tinh-nang" data-en="Features">Tính năng</a>
+<a href="#cach-bat-dau" data-en="How to start">Cách bắt đầu</a>
+<a href="#gia" data-en="Pricing">Giá</a>
+<a href="#hoi-dap" data-en="FAQ">Hỏi đáp</a>
+<a class="btn btn-yellow" href="https://bambootech.flyer.us" target="_blank" rel="noopener" data-en-html='Check <span class="long">&nbsp;level&nbsp;</span> for free'>Kiểm tra <span class="long">&nbsp;trình độ&nbsp;</span> miễn phí</a>
+<div class="lang-switch" role="group" aria-label="Language / Ngôn ngữ">
+<button type="button" class="lang-btn active" data-lang="vi" aria-pressed="true">VI</button>
+<button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+</div>
 </nav>
 </div>
 </header>
@@ -195,37 +206,37 @@ footer a{font-weight:600}
 <div class="blob" style="right:-120px;bottom:-180px;width:440px;height:440px;background:var(--yellow);opacity:.14"></div>
 <div class="wrap">
 <div class="hero-text">
-<div class="pill eyebrow">Dành cho phụ huynh người Việt tại Phần Lan</div>
-<h1>Cho con học tiếng Anh tại nhà, <span>chuẩn Cambridge</span></h1>
-<p>FLYER là nền tảng học tiếng Anh bằng AI cho trẻ em, do Việt Nam phát triển và đang được nhiều trường song ngữ, quốc tế sử dụng. Nay BambooTech là đại lý chính thức tại Phần Lan, hỗ trợ bố mẹ bằng tiếng Việt.</p>
+<div class="pill eyebrow" data-en="For Vietnamese parents in Finland">Dành cho phụ huynh người Việt tại Phần Lan</div>
+<h1><span data-en="Help your child learn English at home, ">Cho con học tiếng Anh tại nhà, </span><span class="hl" data-en="Cambridge-standard">chuẩn Cambridge</span></h1>
+<p data-en="FLYER is an AI-powered English learning platform for children, developed in Vietnam and already used by many bilingual and international schools. BambooTech is now the official agent in Finland, supporting parents in Vietnamese.">FLYER là nền tảng học tiếng Anh bằng AI cho trẻ em, do Việt Nam phát triển và đang được nhiều trường song ngữ, quốc tế sử dụng. Nay BambooTech là đại lý chính thức tại Phần Lan, hỗ trợ bố mẹ bằng tiếng Việt.</p>
 <div class="btns">
-<a class="btn btn-yellow" href="https://bambootech.flyer.us" target="_blank" rel="noopener">Cho con làm bài kiểm tra miễn phí</a>
-<a class="btn btn-ghost" href="#gia">Xem giá: 30 €/năm</a>
+<a class="btn btn-yellow" href="https://bambootech.flyer.us" target="_blank" rel="noopener" data-en="Take the free test for your child">Cho con làm bài kiểm tra miễn phí</a>
+<a class="btn btn-ghost" href="#gia" data-en="See pricing: €30/year">Xem giá: 30 €/năm</a>
 </div>
 <div class="ticks">
-<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Làm ngay tại nhà</span>
-<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Có kết quả ngay theo chuẩn CEFR</span>
+<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-en="Learn right at home">Làm ngay tại nhà</span></span>
+<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-en="Instant results on the CEFR scale">Có kết quả ngay theo chuẩn CEFR</span></span>
 </div>
 </div>
 
 <div class="visual" aria-hidden="true">
 <div class="device">
 <div class="result">
-<div class="result-top">Kết quả kiểm tra trình độ <span class="tag">Chuẩn CEFR</span></div>
+<div class="result-top"><span data-en="Level test result">Kết quả kiểm tra trình độ</span> <span class="tag" data-en="CEFR standard">Chuẩn CEFR</span></div>
 <div class="result-mid">
 <div class="level"><b>A1</b><small>Movers</small></div>
 <div class="bars">
-<div class="bar"><label>Nghe</label><div class="track"><div class="fill" style="width:92%"></div></div></div>
-<div class="bar"><label>Đọc – Viết</label><div class="track"><div class="fill" style="width:58%"></div></div></div>
-<div class="bar"><label>Nói</label><div class="track"><div class="fill" style="width:70%"></div></div></div>
+<div class="bar"><label data-en="Listening">Nghe</label><div class="track"><div class="fill" style="width:92%"></div></div></div>
+<div class="bar"><label data-en="Reading–Writing">Đọc – Viết</label><div class="track"><div class="fill" style="width:58%"></div></div></div>
+<div class="bar"><label data-en="Speaking">Nói</label><div class="track"><div class="fill" style="width:70%"></div></div></div>
 </div>
 </div>
-<div class="tip">Gợi ý: luyện thêm Viết câu ngắn, 10–15 phút mỗi ngày.</div>
+<div class="tip" data-en="Tip: practice short sentence writing for 10–15 minutes a day.">Gợi ý: luyện thêm Viết câu ngắn, 10–15 phút mỗi ngày.</div>
 </div>
 </div>
-<div class="sticker s1">Luyện thi Cambridge<br>Starters · Movers · Flyers</div>
-<div class="sticker s2">AI chấm bài<br>Nói &amp; Viết</div>
-<div class="sticker s3">Báo cáo tiến độ cho bố mẹ</div>
+<div class="sticker s1" data-en-html="Cambridge exam prep<br>Starters · Movers · Flyers">Luyện thi Cambridge<br>Starters · Movers · Flyers</div>
+<div class="sticker s2" data-en-html="AI-graded<br>Speaking &amp; Writing">AI chấm bài<br>Nói &amp; Viết</div>
+<div class="sticker s3" data-en="Progress reports for parents">Báo cáo tiến độ cho bố mẹ</div>
 </div>
 </div>
 </section>
@@ -233,24 +244,24 @@ footer a{font-weight:600}
 <section class="section">
 <div class="wrap">
 <div class="head">
-<div class="eyebrow" style="color:var(--green-text)">Bố mẹ người Việt ở Phần Lan thường lo</div>
-<h2 class="h2">Con lớn lên ở Phần Lan, bố mẹ vẫn muốn con giỏi tiếng Anh</h2>
+<div class="eyebrow" style="color:var(--green-text)" data-en="Common concerns for Vietnamese parents in Finland">Bố mẹ người Việt ở Phần Lan thường lo</div>
+<h2 class="h2" data-en="Growing up in Finland, but you still want your child to excel in English">Con lớn lên ở Phần Lan, bố mẹ vẫn muốn con giỏi tiếng Anh</h2>
 </div>
 <div class="grid3">
 <div class="card">
 <div class="icon i-lav"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h9M8.5 3v2M6 5c0 4 3 7 6 8M11 5c0 4-3 7-7 9"/><path d="M13 21l4-9 4 9M14.5 18h5"/></svg></div>
-<h3>Con học nhiều ngôn ngữ cùng lúc</h3>
-<p>Tiếng Phần Lan hoặc Thụy Điển ở trường, tiếng Việt ở nhà. Tiếng Anh cần một lộ trình rõ ràng để con học đều mà không quá tải.</p>
+<h3 data-en="Juggling multiple languages at once">Con học nhiều ngôn ngữ cùng lúc</h3>
+<p data-en="Finnish or Swedish at school, Vietnamese at home. English needs a clear path so your child can learn steadily without feeling overwhelmed.">Tiếng Phần Lan hoặc Thụy Điển ở trường, tiếng Việt ở nhà. Tiếng Anh cần một lộ trình rõ ràng để con học đều mà không quá tải.</p>
 </div>
 <div class="card">
 <div class="icon i-yel"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-<h3>Bố mẹ bận, khó tự kèm con</h3>
-<p>FLYER tự chấm bài, chỉ ra chỗ con cần luyện và gợi ý bài tiếp theo. Bố mẹ chỉ cần xem báo cáo.</p>
+<h3 data-en="Busy parents, hard to tutor at home">Bố mẹ bận, khó tự kèm con</h3>
+<p data-en="FLYER grades every exercise automatically, shows exactly what to practice, and suggests the next lesson. Parents just check the report.">FLYER tự chấm bài, chỉ ra chỗ con cần luyện và gợi ý bài tiếp theo. Bố mẹ chỉ cần xem báo cáo.</p>
 </div>
 <div class="card">
 <div class="icon i-grn"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7"/></svg></div>
-<h3>Muốn con có mục tiêu cụ thể</h3>
-<p>Luyện theo các kỳ thi Cambridge Starters, Movers, Flyers và khung trình độ CEFR, để bố mẹ biết con đang ở đâu.</p>
+<h3 data-en="Want a clear goal for your child">Muốn con có mục tiêu cụ thể</h3>
+<p data-en="Practice for the Cambridge Starters, Movers, and Flyers exams and the CEFR framework, so you always know where your child stands.">Luyện theo các kỳ thi Cambridge Starters, Movers, Flyers và khung trình độ CEFR, để bố mẹ biết con đang ở đâu.</p>
 </div>
 </div>
 </div>
@@ -259,24 +270,24 @@ footer a{font-weight:600}
 <section class="section lilac" id="tinh-nang">
 <div class="wrap">
 <div class="head">
-<div class="eyebrow" style="color:var(--violet)">Con học gì trên FLYER</div>
-<h2 class="h2">Học như chơi, nhưng tiến bộ thật</h2>
+<div class="eyebrow" style="color:var(--violet)" data-en="What your child learns on FLYER">Con học gì trên FLYER</div>
+<h2 class="h2" data-en="Learning that feels like play, with real progress">Học như chơi, nhưng tiến bộ thật</h2>
 </div>
 <div class="grid3">
-<div class="card"><div class="big">6.000+</div><h3>Bài luyện thi</h3><p>Đề mô phỏng các kỳ thi Cambridge, TOEFL, IOE. Thư viện cập nhật liên tục cho mọi trình độ.</p></div>
-<div class="card"><div class="big">100+</div><h3>Chủ đề luyện nói với Bingo AI</h3><p>Con trò chuyện với gia sư AI theo đúng trình độ, từ Pre A1 đến C2. Lịch sử hội thoại được lưu lại để xem lại.</p></div>
-<div class="card"><div class="big">5–10’</div><h3>Bài học ngắn mỗi ngày</h3><p>Mỗi bài chỉ 5 đến 10 phút, tập trung một kỹ năng. Dễ xếp vào lịch sau giờ học, giúp con có thói quen học đều.</p></div>
+<div class="card"><div class="big">6.000+</div><h3 data-en="Practice tests">Bài luyện thi</h3><p data-en="Mock exams for Cambridge, TOEFL, and IOE. A constantly updated library for every level.">Đề mô phỏng các kỳ thi Cambridge, TOEFL, IOE. Thư viện cập nhật liên tục cho mọi trình độ.</p></div>
+<div class="card"><div class="big">100+</div><h3 data-en="Speaking topics with Bingo AI">Chủ đề luyện nói với Bingo AI</h3><p data-en="Your child chats with an AI tutor matched to their level, from Pre A1 to C2. Conversation history is saved for review.">Con trò chuyện với gia sư AI theo đúng trình độ, từ Pre A1 đến C2. Lịch sử hội thoại được lưu lại để xem lại.</p></div>
+<div class="card"><div class="big">5–10’</div><h3 data-en="Short daily lessons">Bài học ngắn mỗi ngày</h3><p data-en="Each lesson is just 5 to 10 minutes, focused on one skill. Easy to fit after school and builds a steady learning habit.">Mỗi bài chỉ 5 đến 10 phút, tập trung một kỹ năng. Dễ xếp vào lịch sau giờ học, giúp con có thói quen học đều.</p></div>
 <div class="card">
 <div class="icon i-lav"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/></svg></div>
-<h3>AI chấm Nói và Viết</h3><p>Nộp bài là có điểm, đáp án và nhận xét chi tiết cho cả 4 kỹ năng, theo tiêu chí của kỳ thi thật.</p>
+<h3 data-en="AI grading for Speaking & Writing">AI chấm Nói và Viết</h3><p data-en="Submit an answer and get an instant score, model answer, and detailed feedback across all 4 skills, scored to real exam criteria.">Nộp bài là có điểm, đáp án và nhận xét chi tiết cho cả 4 kỹ năng, theo tiêu chí của kỳ thi thật.</p>
 </div>
 <div class="card">
 <div class="icon i-yel"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4"/></svg></div>
-<h3>Trò chơi và thử thách</h3><p>Đấu trường thử thách, trò chơi từ vựng và bảng xếp hạng giúp con tập trung và hứng thú hơn khi học.</p>
+<h3 data-en="Games and challenges">Trò chơi và thử thách</h3><p data-en="Challenge arenas, vocabulary games, and leaderboards keep your child focused and having fun while learning.">Đấu trường thử thách, trò chơi từ vựng và bảng xếp hạng giúp con tập trung và hứng thú hơn khi học.</p>
 </div>
 <div class="card">
 <div class="icon i-grn"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
-<h3>Báo cáo cho bố mẹ</h3><p>Mọi bài làm đều được lưu: điểm, thời gian, câu đúng. Bố mẹ theo dõi con tiến bộ thế nào, yếu ở đâu.</p>
+<h3 data-en="Reports for parents">Báo cáo cho bố mẹ</h3><p data-en="Every attempt is saved: score, time spent, correct answers. Track exactly how your child is progressing and where they need help.">Mọi bài làm đều được lưu: điểm, thời gian, câu đúng. Bố mẹ theo dõi con tiến bộ thế nào, yếu ở đâu.</p>
 </div>
 </div>
 </div>
@@ -285,13 +296,13 @@ footer a{font-weight:600}
 <section class="section" id="cach-bat-dau">
 <div class="wrap">
 <div class="head">
-<div class="eyebrow" style="color:var(--green-text)">Cách bắt đầu</div>
-<h2 class="h2">3 bước để con bắt đầu học</h2>
+<div class="eyebrow" style="color:var(--green-text)" data-en="How to start">Cách bắt đầu</div>
+<h2 class="h2" data-en="3 steps to get your child started">3 bước để con bắt đầu học</h2>
 </div>
 <div class="grid3">
-<div class="card"><div class="num" style="background:var(--yellow);color:var(--ink)">1</div><h3>Làm bài kiểm tra trình độ miễn phí</h3><p>Vào <a href="https://bambootech.flyer.us" target="_blank" rel="noopener"><b>bambootech.flyer.us</b></a>. Máy chấm tự động và cho biết ngay con đang ở trình độ CEFR nào.</p></div>
-<div class="card"><div class="num" style="background:var(--lav);color:var(--ink)">2</div><h3>Mua mã kích hoạt qua BambooTech</h3><p>Gửi email hoặc gọi cho BambooTech. Thanh toán bằng euro, được hướng dẫn bằng tiếng Việt.</p></div>
-<div class="card"><div class="num" style="background:var(--green);color:#fff">3</div><h3>Kích hoạt và cho con học</h3><p>Nhập mã là con học được ngay, trên máy tính hoặc điện thoại. Tài khoản dùng 1 năm, tính từ ngày kích hoạt.</p></div>
+<div class="card"><div class="num" style="background:var(--yellow);color:var(--ink)">1</div><h3 data-en="Take the free level test">Làm bài kiểm tra trình độ miễn phí</h3><p data-en-html='Go to <a href="https://bambootech.flyer.us" target="_blank" rel="noopener"><b>bambootech.flyer.us</b></a>. It is graded automatically and instantly shows your child&#39;s CEFR level.'>Vào <a href="https://bambootech.flyer.us" target="_blank" rel="noopener"><b>bambootech.flyer.us</b></a>. Máy chấm tự động và cho biết ngay con đang ở trình độ CEFR nào.</p></div>
+<div class="card"><div class="num" style="background:var(--lav);color:var(--ink)">2</div><h3 data-en="Buy an activation code from BambooTech">Mua mã kích hoạt qua BambooTech</h3><p data-en="Email or call BambooTech. Pay in euros, with guidance in Vietnamese.">Gửi email hoặc gọi cho BambooTech. Thanh toán bằng euro, được hướng dẫn bằng tiếng Việt.</p></div>
+<div class="card"><div class="num" style="background:var(--green);color:#fff">3</div><h3 data-en="Activate and start learning">Kích hoạt và cho con học</h3><p data-en="Enter the code and your child can start right away, on computer or phone. The account is valid for 1 year from the activation date.">Nhập mã là con học được ngay, trên máy tính hoặc điện thoại. Tài khoản dùng 1 năm, tính từ ngày kích hoạt.</p></div>
 </div>
 </div>
 </section>
@@ -299,25 +310,25 @@ footer a{font-weight:600}
 <section id="gia" style="padding-bottom:100px">
 <div class="wrap grid2">
 <div class="price">
-<div class="badge">1 tài khoản · 1 năm</div>
-<div class="amount"><b>30 €</b><span>/ năm</span></div>
-<p style="font-size:17px;line-height:1.5;color:var(--lav-text)">Chưa đến 3 € mỗi tháng cho con học mỗi ngày.</p>
+<div class="badge" data-en="1 account · 1 year">1 tài khoản · 1 năm</div>
+<div class="amount"><b>30 €</b><span data-en="/ year">/ năm</span></div>
+<p style="font-size:17px;line-height:1.5;color:var(--lav-text)" data-en="Less than €3 a month for daily learning.">Chưa đến 3 € mỗi tháng cho con học mỗi ngày.</p>
 <ul class="list">
-<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Toàn bộ thư viện bài luyện thi</li>
-<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Luyện nói với Bingo AI</li>
-<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>AI chấm bài Nói và Viết</li>
-<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Báo cáo tiến độ cho bố mẹ</li>
-<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Học trên web và ứng dụng điện thoại</li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-en="Full library of practice tests">Toàn bộ thư viện bài luyện thi</span></li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-en="Speaking practice with Bingo AI">Luyện nói với Bingo AI</span></li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-en="AI grading for Speaking and Writing">AI chấm bài Nói và Viết</span></li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-en="Progress reports for parents">Báo cáo tiến độ cho bố mẹ</span></li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-en="Learn on web and mobile app">Học trên web và ứng dụng điện thoại</span></li>
 </ul>
-<a class="btn btn-yellow" href="mailto:info@bambootech.fi?subject=Mua%20m%C3%A3%20k%C3%ADch%20ho%E1%BA%A1t%20FLYER">Đặt mua mã kích hoạt</a>
+<a class="btn btn-yellow" href="https://wa.me/358408175366?text=Xin%20ch%C3%A0o%20BambooTech%2C%20t%C3%B4i%20mu%E1%BB%91n%20mua%20m%C3%A3%20k%C3%ADch%20ho%E1%BA%A1t%20FLYER." target="_blank" rel="noopener" data-en="Order an activation code" data-en-href="https://wa.me/358408175366?text=Hi%20BambooTech%2C%20I%27d%20like%20to%20buy%20a%20FLYER%20activation%20code.">Đặt mua mã kích hoạt</a>
 </div>
 
 <div class="why">
-<h2>Vì sao mua qua BambooTech?</h2>
-<div class="why-item"><div class="icon i-grn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><div><b>Đại lý chính thức của FLYER tại Phần Lan</b><p>Mã kích hoạt chính hãng, mua từ một công ty ở Helsinki.</p></div></div>
-<div class="why-item"><div class="icon i-lav"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></div><div><b>Hỗ trợ bằng tiếng Việt</b><p>Đội ngũ người Việt sống tại Phần Lan giúp bố mẹ cài đặt, kích hoạt và chọn lộ trình cho con.</p></div></div>
-<div class="why-item"><div class="icon i-yel"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 7a7 7 0 1 0 0 10M4 10h9M4 14h9"/></svg></div><div><b>Thanh toán bằng euro</b><p>Không cần chuyển tiền về Việt Nam hay đổi ngoại tệ.</p></div></div>
-<div class="why-item"><div class="icon i-lav"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2 .7 3.5 3 3.5 6"/></svg></div><div><b>Mua cho nhiều con, nhiều gia đình</b><p>Liên hệ để hỏi giá khi mua nhiều tài khoản: [ƯU ĐÃI NHÓM]</p></div></div>
+<h2 data-en="Why buy through BambooTech?">Vì sao mua qua BambooTech?</h2>
+<div class="why-item"><div class="icon i-grn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><div><b data-en="Official FLYER agent in Finland">Đại lý chính thức của FLYER tại Phần Lan</b><p data-en="Genuine activation codes, purchased from a company based in Helsinki.">Mã kích hoạt chính hãng, mua từ một công ty ở Helsinki.</p></div></div>
+<div class="why-item"><div class="icon i-lav"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></div><div><b data-en="Support in Vietnamese">Hỗ trợ bằng tiếng Việt</b><p data-en="A Vietnamese team based in Finland helps parents install, activate, and choose the right path for their child.">Đội ngũ người Việt sống tại Phần Lan giúp bố mẹ cài đặt, kích hoạt và chọn lộ trình cho con.</p></div></div>
+<div class="why-item"><div class="icon i-yel"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 7a7 7 0 1 0 0 10M4 10h9M4 14h9"/></svg></div><div><b data-en="Pay in euros">Thanh toán bằng euro</b><p data-en="No need to transfer money to Vietnam or exchange currency.">Không cần chuyển tiền về Việt Nam hay đổi ngoại tệ.</p></div></div>
+<div class="why-item"><div class="icon i-lav"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2 .7 3.5 3 3.5 6"/></svg></div><div><b data-en="Buying for multiple children or families">Mua cho nhiều con, nhiều gia đình</b><p data-en="Contact us for pricing on multiple accounts: [GROUP DISCOUNT]">Liên hệ để hỏi giá khi mua nhiều tài khoản: [ƯU ĐÃI NHÓM]</p></div></div>
 </div>
 </div>
 </section>
@@ -325,14 +336,14 @@ footer a{font-weight:600}
 <section class="section lilac" id="hoi-dap">
 <div class="wrap">
 <div class="head">
-<div class="eyebrow" style="color:var(--violet)">Hỏi đáp</div>
-<h2 class="h2">Bố mẹ hay hỏi</h2>
+<div class="eyebrow" style="color:var(--violet)" data-en="FAQ">Hỏi đáp</div>
+<h2 class="h2" data-en="Frequently asked questions">Bố mẹ hay hỏi</h2>
 </div>
 <div class="grid2">
-<details open><summary>Con mấy tuổi thì học được?</summary><p>FLYER có bài từ trình độ Pre A1 đến C2, từ bé mới làm quen tiếng Anh đến học sinh lớn. Bài kiểm tra miễn phí sẽ cho biết con nên bắt đầu từ đâu.</p></details>
-<details><summary>Con học trên thiết bị nào?</summary><p>Máy tính, máy tính bảng hoặc điện thoại, qua website và ứng dụng FLYER.</p></details>
-<details><summary>Tài khoản dùng được bao lâu?</summary><p>1 năm, tính từ ngày kích hoạt mã, không phải từ ngày mua. Bố mẹ có thể mua trước và kích hoạt khi con sẵn sàng.</p></details>
-<details><summary>Thanh toán như thế nào?</summary><p>[CÁCH THANH TOÁN: chuyển khoản, MobilePay…]. Sau khi thanh toán, BambooTech gửi mã kích hoạt và hướng dẫn qua email.</p></details>
+<details open><summary data-en="What age can my child start?">Con mấy tuổi thì học được?</summary><p data-en="FLYER covers levels from Pre A1 to C2, from beginners to advanced students. The free test shows exactly where your child should start.">FLYER có bài từ trình độ Pre A1 đến C2, từ bé mới làm quen tiếng Anh đến học sinh lớn. Bài kiểm tra miễn phí sẽ cho biết con nên bắt đầu từ đâu.</p></details>
+<details><summary data-en="Which devices can my child use?">Con học trên thiết bị nào?</summary><p data-en="Computer, tablet, or phone, through the FLYER website and app.">Máy tính, máy tính bảng hoặc điện thoại, qua website và ứng dụng FLYER.</p></details>
+<details><summary data-en="How long is the account valid?">Tài khoản dùng được bao lâu?</summary><p data-en="1 year from the date the code is activated, not the purchase date. You can buy in advance and activate whenever your child is ready.">1 năm, tính từ ngày kích hoạt mã, không phải từ ngày mua. Bố mẹ có thể mua trước và kích hoạt khi con sẵn sàng.</p></details>
+<details><summary data-en="How do I pay?">Thanh toán như thế nào?</summary><p data-en="[PAYMENT METHODS: bank transfer, MobilePay…]. After payment, BambooTech emails the activation code and instructions.">[CÁCH THANH TOÁN: chuyển khoản, MobilePay…]. Sau khi thanh toán, BambooTech gửi mã kích hoạt và hướng dẫn qua email.</p></details>
 </div>
 </div>
 </section>
@@ -342,15 +353,15 @@ footer a{font-weight:600}
 <div class="cta">
 <div class="blob" style="right:-120px;top:-140px;width:380px;height:380px;background:var(--green);opacity:.3"></div>
 <div class="cta-text">
-<h2>Bắt đầu bằng bài kiểm tra <span class="hl">miễn phí</span></h2>
-<p>Biết ngay trình độ tiếng Anh của con theo chuẩn CEFR. Có câu hỏi? Nhắn cho BambooTech bằng tiếng Việt.</p>
+<h2><span data-en="Start with a ">Bắt đầu bằng bài kiểm tra </span><span class="hl" data-en="free test">miễn phí</span></h2>
+<p data-en="Find out your child's English level on the CEFR scale instantly. Have questions? Message BambooTech in Vietnamese.">Biết ngay trình độ tiếng Anh của con theo chuẩn CEFR. Có câu hỏi? Nhắn cho BambooTech bằng tiếng Việt.</p>
 <div class="btns">
-<a class="btn btn-yellow" href="https://bambootech.flyer.us" target="_blank" rel="noopener">Làm bài kiểm tra ngay</a>
+<a class="btn btn-yellow" href="https://bambootech.flyer.us" target="_blank" rel="noopener" data-en="Take the test now">Làm bài kiểm tra ngay</a>
 <a class="btn btn-ghost" href="tel:+358408175366">Gọi 040 817 5366</a>
 </div>
 <p style="font-size:17px">Email: <a href="mailto:info@bambootech.fi" style="color:#fff;font-weight:700">info@bambootech.fi</a></p>
 </div>
-<div class="qr"><img src="images/qr-test.png" alt="Mã QR tới bambootech.flyer.us">Quét để làm bài kiểm tra</div>
+<div class="qr"><img src="images/qr-test.png" alt="Mã QR tới bambootech.flyer.us" data-en-alt="QR code to bambootech.flyer.us"><span data-en="Scan to take the test">Quét để làm bài kiểm tra</span></div>
 </div>
 </div>
 </section>
@@ -360,7 +371,7 @@ footer a{font-weight:600}
 <div class="wrap">
 <div>
 <div style="font-size:18px;font-weight:700;color:var(--ink)">BambooTech</div>
-<div>Đại lý chính thức của FLYER tại Phần Lan</div>
+<div data-en="Official FLYER agent in Finland">Đại lý chính thức của FLYER tại Phần Lan</div>
 <div>Konalantie 14B, 00370 Helsinki</div>
 </div>
 <div class="right">
@@ -370,6 +381,64 @@ footer a{font-weight:600}
 </div>
 </div>
 </footer>
+
+<script>
+(function(){
+  var STORAGE_KEY = 'flyer-lang';
+
+  function applyLang(lang){
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(el.dataset.vi === undefined) el.dataset.vi = el.textContent;
+      el.textContent = lang === 'en' ? el.dataset.en : el.dataset.vi;
+    });
+
+    document.querySelectorAll('[data-en-html]').forEach(function(el){
+      if(el.dataset.viHtml === undefined) el.dataset.viHtml = el.innerHTML;
+      el.innerHTML = lang === 'en' ? el.dataset.enHtml : el.dataset.viHtml;
+    });
+
+    document.querySelectorAll('[data-en-alt]').forEach(function(el){
+      if(el.dataset.viAlt === undefined) el.dataset.viAlt = el.getAttribute('alt') || '';
+      el.setAttribute('alt', lang === 'en' ? el.dataset.enAlt : el.dataset.viAlt);
+    });
+
+    document.querySelectorAll('[data-en-href]').forEach(function(el){
+      if(el.dataset.viHref === undefined) el.dataset.viHref = el.getAttribute('href') || '';
+      el.setAttribute('href', lang === 'en' ? el.dataset.enHref : el.dataset.viHref);
+    });
+
+    document.querySelectorAll('[data-en-aria]').forEach(function(el){
+      if(el.dataset.viAria === undefined) el.dataset.viAria = el.getAttribute('aria-label') || '';
+      el.setAttribute('aria-label', lang === 'en' ? el.dataset.enAria : el.dataset.viAria);
+    });
+
+    document.querySelectorAll('meta[data-en-content]').forEach(function(el){
+      if(el.dataset.viContent === undefined) el.dataset.viContent = el.getAttribute('content') || '';
+      el.setAttribute('content', lang === 'en' ? el.dataset.enContent : el.dataset.viContent);
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(function(btn){
+      var active = btn.dataset.lang === lang;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+
+    try{ localStorage.setItem(STORAGE_KEY, lang); }catch(e){}
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.lang-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){ applyLang(btn.dataset.lang); });
+    });
+
+    var saved = null;
+    try{ saved = localStorage.getItem(STORAGE_KEY); }catch(e){}
+    applyLang(saved === 'en' ? 'en' : 'vi');
+  });
+})();
+</script>
 
 </body>
 </html>
